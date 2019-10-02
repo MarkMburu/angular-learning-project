@@ -15,6 +15,8 @@ import { IEvent, ISession } from '../shared';
 export class EventDetailsComponent{
 event:IEvent
 addMode
+filterBy:string ='all'
+sortBy:string = 'votes'
 constructor(private eventService: EventService,private route: ActivatedRoute,private router:Router){
 
 }
