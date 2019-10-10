@@ -17,6 +17,7 @@ export class VoterService{
 
     }
     addVoter(eventId:number,session:ISession,voterName:string){
+      session.voters.push(voterName);
          const url = `/api/events/${eventId}/sessions/${session.id}/voters/${voterName}`;
          const options = {headers : new HttpHeaders({'content-Type': '/application/json'})}
          this.http.post(url,{},options)
